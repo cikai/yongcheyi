@@ -10,12 +10,13 @@
 <link rel="stylesheet" type="text/css"
 	href="css/libs/jquery.dataTables.css">
 <script src="js/libs/jquery-2.1.4.js"></script>
+<script src="js/articleAdd.js"></script>
 <script data-main="js/main" src="js/libs/require.js"></script>
 
 <title></title>
 </head>
 
 <body>
-
+articleAdd.jsp
 </body>
 </html>

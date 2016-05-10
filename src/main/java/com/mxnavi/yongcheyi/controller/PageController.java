@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class MainController {
+public class PageController {
 
     @RequestMapping("/main")
     @ResponseBody
@@ -31,4 +31,21 @@ public class MainController {
         view.setViewName("evaluationList");
         return view;
     }
+    
+    @RequestMapping("/articleAdd")
+    @ResponseBody
+    public ModelAndView articleAdd() {
+        ModelAndView view = new ModelAndView();
+        view.setViewName("articleAdd");
+        return view;
+    }
+    
+    @RequestMapping("/userManage")
+    @ResponseBody
+    public ModelAndView userManage() {
+        ModelAndView view = new ModelAndView();
+        view.setViewName("userManage");
+        return view;
+    }
+    
 }

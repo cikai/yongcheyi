@@ -1,9 +1,7 @@
-define(["menu"], function(menu) {
+define([], function() {
 
 	function init() {
-
-		menu.init();
-		
+		console.log("asdf")
 	}
 
 	return ({

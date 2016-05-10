@@ -10,24 +10,23 @@ import com.mxnavi.yongcheyi.model.resp.Article;
 import com.mxnavi.yongcheyi.service.ArticleService;
 
 @Controller
-@RequestMapping("/articleAdd")
+@RequestMapping("/addArticle")
 public class ArticleController {
 	@Autowired
 	private ArticleService articleService;
 
+	@ResponseBody
 	@RequestMapping(method = RequestMethod.GET)
-	public void add() {
-		Article article = new Article();
-		article.setId(0);
-		article.setDescription("test");
-		article.setPicUrl("www.google.com");
-		article.setUrl("www.cikai.me");
-		article.setTitle("title");
+	public void add(Article article) {
 		articleService.addArticle(article);
 	}
-	
-	@ResponseBody
-	public void get() {
+
+	public void select() {
+		Article article = new Article();
 		articleService.getArticle(1);
+		System.out.println(article.getTitle());
+		System.out.println(article.getDescription());
+		System.out.println(article.getPicUrl());
+		System.out.println(article.getUrl());
 	}
 }

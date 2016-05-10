@@ -1,6 +1,6 @@
 require.config({
 	paths : {
-		"common" : "common/common",
+		"common": "common"
 	}
 });
 
