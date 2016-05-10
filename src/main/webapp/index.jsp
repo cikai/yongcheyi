@@ -1,5 +1,18 @@
 <html>
+<head>
+<title>yongcheyi</title>
+</head>
 <body>
-<h2>Hello World!</h2>
+</body>
+<script>
+    function getContextPath() {
+        var fullPath = window.location.pathname;
+        var contextPath = fullPath.split("/")[1];
+        return contextPath;
+    }
+    window.location.href = "/" + getContextPath() + "/main";
+</script>
+<body>
+
 </body>
 </html>

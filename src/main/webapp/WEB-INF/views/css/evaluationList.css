@@ -1,0 +1,15 @@
+.nav-channel {
+	position: relative;
+	height: 2.5rem;
+	line-height: 1;
+	background-color: #A1C16C;
+	overflow: hidden;
+}
+
+.nav-channel .channel {
+	position: relative;
+	float: left;
+	margin: 0.625rem 0 0 1.625rem;
+	font-size: 1.25rem;
+	color: #fff;
+}
