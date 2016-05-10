@@ -1,10 +1,11 @@
 require.config({
-    paths: {
-    }
+	paths : {
+		"common" : "common/common",
+	}
 });
 
 require([ "top" ], function(top) {
-    $(function() {
-        top.init();
-    });
+	$(function() {
+		top.init();
+	});
 });

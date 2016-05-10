@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/top.css">
 <script src="js/libs/jquery-2.1.4.js"></script>
 <script src="js/libs/jquery.mobile-1.4.5.js"></script>
-<script src="js/top.js"></script>
+<script src="js/search.js"></script>
 <script data-main="js/main" src="js/libs/require.js"></script>
 
 <title>找用品 - 按车型</title>

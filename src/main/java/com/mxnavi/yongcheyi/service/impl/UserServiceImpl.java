@@ -26,8 +26,6 @@ public class UserServiceImpl implements UserService {
 
 	public void saveUser(User user) {
 		userMapper.insert(user);
-//		抛出运行时异常，sql会自动rollback
-//		throw new RuntimeException();
 	}
 
 }
