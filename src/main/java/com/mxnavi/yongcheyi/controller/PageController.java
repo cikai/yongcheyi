@@ -16,19 +16,19 @@ public class PageController {
         return view;
     }
 
-    @RequestMapping("/search")
+    @RequestMapping("/mSearch")
     @ResponseBody
     public ModelAndView searchByType() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("search");
+        view.setViewName("mSearch");
         return view;
     }
     
-    @RequestMapping("/evaluationList")
+    @RequestMapping("/mEvaluationList")
     @ResponseBody
     public ModelAndView evaluationList() {
         ModelAndView view = new ModelAndView();
-        view.setViewName("evaluationList");
+        view.setViewName("mEvaluationList");
         return view;
     }
     

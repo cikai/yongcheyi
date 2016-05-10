@@ -67,21 +67,12 @@ public class ArticleServiceForWeixin {
 				if ("3".equals(content)) {
 					Article article1 = new Article();
 					article1.setTitle("测试3-1");
-					article1.setDescription("");
-					article1.setPicUrl("http://ooo.0o0.ooo/2016/05/02/57280a3c4aa34.jpg");
-					article1.setUrl("http://cikai.github.io");
 
 					Article article2 = new Article();
 					article2.setTitle("测试3-2");
-					article2.setDescription("");
-					article2.setPicUrl("http://ooo.0o0.ooo/2016/05/02/57280a3c4aa34.jpg");
-					article2.setUrl("http://cikai.github.io");
 
 					Article article3 = new Article();
 					article3.setTitle("测试3-3");
-					article3.setDescription("");
-					article3.setPicUrl("http://ooo.0o0.ooo/2016/05/02/57280a3c4aa34.jpg");
-					article3.setUrl("http://cikai.github.io");
 
 					articleList.add(article1);
 					articleList.add(article2);
@@ -106,10 +97,6 @@ public class ArticleServiceForWeixin {
 						// 单图文消息
 						Article article = new Article();
 						article.setTitle("我拆你看 - 雷凌");
-						article.setDescription("雷凌 10.78-15.98万");
-						article.setPicUrl(
-								"http://car2.m.autoimg.cn/cardfs/product/g11/M02/0A/33/va_wp_autohomecar__wKjBzFZqxGqAOtu2AAkkFHP2CHY105.jpg");
-						article.setUrl("http://m.autohome.com.cn/3462/#pvareaid=104702");
 						articleList.add(article);
 						newsMessage.setArticleCount(articleList.size());
 						newsMessage.setArticles(articleList);
@@ -118,23 +105,12 @@ public class ArticleServiceForWeixin {
 						// 多图文消息
 						Article article1 = new Article();
 						article1.setTitle("新款蒙奇奇卡通立体造型粗冰丝凉垫");
-						article1.setDescription("夏季汽车坐垫 通用四季垫车垫");
-						article1.setPicUrl("http://img.che777.com/images/201305/goods_img/20186_G_1369073077039.jpg");
-						article1.setUrl("http://www.che777.com/%E6%B1%BD%E8%BD%A6%E5%BA%A7%E5%9E%AB/g20186.html");
 
 						Article article2 = new Article();
 						article2.setTitle("御车宝 摩丝娃娃 车载摇头公仔");
-						article2.setDescription("商品编号：17167    支持车型：通用车型");
-						article2.setPicUrl("http://img.che777.com/images/201109/goods_img/17167_G_1316986775400.jpg");
-						article2.setUrl(
-								"http://www.che777.com/%E5%A4%AA%E9%98%B3%E8%83%BD%E5%85%AC%E4%BB%94/g17167.html");
 
 						Article article3 = new Article();
 						article3.setTitle("单车岁月 防水透气运动型抱枕");
-						article3.setDescription("商品编号：17167    支持车型：通用车型");
-						article3.setPicUrl("http://img.che777.com/images/201112/goods_img/18492_P_1323107063206.jpg");
-						article3.setUrl(
-								"http://www.che777.com/%E7%A9%BA%E8%B0%83%E8%A2%AB%E6%8A%B1%E6%9E%95/g18492.html");
 
 						articleList.add(article1);
 						articleList.add(article2);

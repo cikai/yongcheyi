@@ -1,7 +1,7 @@
 define([], function() {
 
 	function init() {
-		console.log("124")
+		//console.log("userManage.js")
 	}
 
 	return ({

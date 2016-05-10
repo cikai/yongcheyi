@@ -1,8 +1,10 @@
-define(["menu"], function(menu) {
+define(["menu", "userManage"], function(menu, userManage) {
 
 	function init() {
 
 		menu.init();
+		
+		userManage.init();
 		
 	}
 

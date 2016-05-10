@@ -1,53 +1,115 @@
 package com.mxnavi.yongcheyi.model.resp;
 
+import java.util.Date;
+
 public class Article {
-    private Integer id;
+	private Integer id;
 
-    private String description;
+	private String title;
 
-    private String picUrl;
+	private Integer thumbMediaId;
 
-    private String url;
+	private String author;
 
-    private String title;
+	private String digest;
 
-    public Integer getId() {
-        return id;
-    }
+	private Byte showCoverPic;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	private String contentSourceUrl;
 
-    public String getDescription() {
-        return description;
-    }
+	private String softDeleteFlag;
 
-    public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
-    }
+	private Date createTime;
 
-    public String getPicUrl() {
-        return picUrl;
-    }
+	private Date updateTime;
 
-    public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl == null ? null : picUrl.trim();
-    }
+	private String content;
 
-    public String getUrl() {
-        return url;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setUrl(String url) {
-        this.url = url == null ? null : url.trim();
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
+	public void setTitle(String title) {
+		this.title = title == null ? null : title.trim();
+	}
+
+	public Integer getThumbMediaId() {
+		return thumbMediaId;
+	}
+
+	public void setThumbMediaId(Integer thumbMediaId) {
+		this.thumbMediaId = thumbMediaId;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author == null ? null : author.trim();
+	}
+
+	public String getDigest() {
+		return digest;
+	}
+
+	public void setDigest(String digest) {
+		this.digest = digest == null ? null : digest.trim();
+	}
+
+	public Byte getShowCoverPic() {
+		return showCoverPic;
+	}
+
+	public void setShowCoverPic(Byte showCoverPic) {
+		this.showCoverPic = showCoverPic;
+	}
+
+	public String getContentSourceUrl() {
+		return contentSourceUrl;
+	}
+
+	public void setContentSourceUrl(String contentSourceUrl) {
+		this.contentSourceUrl = contentSourceUrl == null ? null : contentSourceUrl.trim();
+	}
+
+	public String getSoftDeleteFlag() {
+		return softDeleteFlag;
+	}
+
+	public void setSoftDeleteFlag(String softDeleteFlag) {
+		this.softDeleteFlag = softDeleteFlag == null ? null : softDeleteFlag.trim();
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content == null ? null : content.trim();
+	}
 }

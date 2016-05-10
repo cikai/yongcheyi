@@ -10,7 +10,8 @@ define(function() {
 		url = "/" + getContextPath() + "/" + pageName;
 
 		$.ajax(url, {
-			dataType : "html"
+			dataType : "html",
+			async: false
 		}).done(function(htmlContent) {
 			$("#main").html(htmlContent);
 			$("#main").scrollTop(0);
