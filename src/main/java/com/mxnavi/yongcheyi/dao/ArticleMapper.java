@@ -1,5 +1,9 @@
 package com.mxnavi.yongcheyi.dao;
 
+import java.util.List;
+
+import com.mxnavi.yongcheyi.dto.ArticleDto;
+import com.mxnavi.yongcheyi.model.SearchModel;
 import com.mxnavi.yongcheyi.model.resp.Article;
 
 public interface ArticleMapper {
@@ -9,7 +13,7 @@ public interface ArticleMapper {
 
     int insertSelective(Article record);
 
-    Article selectByPrimaryKey(Integer id);
+    public List<ArticleDto> selectByCondition(SearchModel searchModel);
 
     int updateByPrimaryKeySelective(Article record);
 

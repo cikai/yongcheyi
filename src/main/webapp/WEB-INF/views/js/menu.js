@@ -1,27 +1,34 @@
-define([ "common" ], function(common) {
+$(document).ready(function() {
 
-	function init() {
-
-		var deferred = new $.Deferred();
-
-		initListener();
-
-		deferred.resolve();
-
-		return $.when(deferred);
+	function getContextPath() {
+		var fullPath = window.location.pathname;
+		var contextPath = fullPath.split("/")[1];
+		return contextPath;
 	}
 
-	function initListener() {
-		$("#articleAdd").off("click").on("click", function() {
-			common.loadPage("articleAdd");
-		});
+	var loadPage = function(pageName) {
+		url = "/" + getContextPath() + "/" + pageName;
 
-		$("#userManage").off("click").on("click", function() {
-			common.loadPage("userManage");
+		$.ajax(url, {
+			dataType : "html",
+			async : false
+		}).done(function(htmlContent) {
+			$("#main").html(htmlContent);
+			$("#main").scrollTop(0);
+		}).fail(function(xhr) {
+			console.log("error");
 		});
-	}
+	};
 
-	return ({
-		"init" : init
+	$("#articleAdd").off("click").on("click", function() {
+		loadPage("articleAdd");
+	});
+
+	$("#articlePost").off("click").on("click", function() {
+		loadPage("articlePost");
+	});
+
+	$("#userManage").off("click").on("click", function() {
+		loadPage("userManage");
 	});
 });

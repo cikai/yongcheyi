@@ -1,6 +1,7 @@
 require.config({
 	paths : {
-		"common": "common"
+		"common": "common",
+		"dataTable": "libs/jquery.dataTables"
 	}
 });
 

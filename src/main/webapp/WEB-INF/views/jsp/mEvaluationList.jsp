@@ -9,7 +9,6 @@
 <link rel="stylesheet" type="text/css" href="css/evaluationList.css">
 <script src="js/libs/jquery-2.1.4.js"></script>
 <script src="js/libs/jquery.mobile-1.4.5.js"></script>
-<script data-main="js/main" src="js/libs/require.js"></script>
 
 <title>测评文章</title>
 </head>

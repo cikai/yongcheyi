@@ -11,7 +11,8 @@
 	href="css/libs/jquery.dataTables.css">
 <link rel="stylesheet" type="text/css" href="css/top.css">
 <script src="js/libs/jquery-2.1.4.js"></script>
-<script data-main="js/main" src="js/libs/require.js"></script>
+<script src="js/libs/jquery.dataTables.js"></script>
+<script src="js/menu.js"></script>
 
 <title>用车易文章管理系统</title>
 </head>
@@ -23,9 +24,14 @@
 
 	<div class="menu">
 		<div class="submenu">
+			<span style="padding-left: 5px;">文章管理</span>
 			<ul>
-				<li id="articleAdd"><a href="javascript:void(0);">文章新增</a></li>
-				<li id="userManage"><a href="javascript:void(0);">用户管理</a></li>
+				<li id="articleAdd"><a href="javascript:void(0);">新增</a></li>
+				<li id="articlePost"><a href="javascript:void(0);">发布</a></li>
+			</ul>
+			<span style="padding-left: 5px;">用户管理</span>
+			<ul>
+				<li id="userManage"><a href="javascript:void(0);">test</a></li>
 			</ul>
 		</div>
 	</div>

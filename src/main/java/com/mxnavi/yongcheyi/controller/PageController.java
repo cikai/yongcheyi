@@ -40,6 +40,14 @@ public class PageController {
         return view;
     }
     
+    @RequestMapping("/articlePost")
+    @ResponseBody
+    public ModelAndView articlePost() {
+        ModelAndView view = new ModelAndView();
+        view.setViewName("articlePost");
+        return view;
+    }
+    
     @RequestMapping("/userManage")
     @ResponseBody
     public ModelAndView userManage() {

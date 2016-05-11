@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.mxnavi.yongcheyi.dao.ArticleMapper" >
-  <resultMap id="BaseResultMap" type="com.mxnavi.yongcheyi.model.resp.Article" >
+  <resultMap id="BaseResultMap" type="com.mxnavi.yongcheyi.dto.ArticleDto" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="thumb_media_id" property="thumbMediaId" jdbcType="INTEGER" />
@@ -13,7 +13,7 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.mxnavi.yongcheyi.model.resp.Article" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="com.mxnavi.yongcheyi.dto.ArticleDto" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -23,13 +23,16 @@
   <sql id="Blob_Column_List" >
     content
   </sql>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+  <select id="selectByCondition" resultMap="ResultMapWithBLOBs" parameterType="com.mxnavi.yongcheyi.model.SearchModel" >
     select 
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from article
-    where id = #{id,jdbcType=INTEGER}
+    from article 
+    where 1=1 
+    <if test="id !=null">
+    	AND id = #{id,jdbcType=INTEGER}
+    </if>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from article

@@ -424,7 +424,7 @@
 		 * sZeroRecords - assuming that is given.
 		 */
 		if ( ! lang.sEmptyTable && zeroRecords &&
-			defaults.sEmptyTable === "暂无订餐数据！" )
+			defaults.sEmptyTable === "暂无数据！" )
 		{
 			_fnMap( lang, lang, 'sZeroRecords', 'sEmptyTable' );
 		}
@@ -11340,7 +11340,7 @@
 			 * parameter - if it is not given, the value of `zeroRecords` will be used
 			 * instead (either the default or given value).
 			 *  @type string
-			 *  @default 暂无订餐数据！
+			 *  @default 暂无数据！
 			 *
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.emptyTable
@@ -11349,12 +11349,12 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "emptyTable": "暂无订餐数据！"
+			 *          "emptyTable": "暂无数据！"
 			 *        }
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "暂无订餐数据！",
+			"sEmptyTable": "暂无数据！",
 	
 	
 			/**
