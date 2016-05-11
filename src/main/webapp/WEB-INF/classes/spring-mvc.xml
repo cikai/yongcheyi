@@ -19,6 +19,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	<mvc:resources location="/WEB-INF/views/images/" mapping="/images/**" />
 	<mvc:resources location="/WEB-INF/views/js/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/views/jsp/" mapping="/jsp/**" />
+	<mvc:resources location="/WEB-INF/views/assets/" mapping="/assets/**" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -6,6 +6,8 @@ function initListener() {
 
 	$("#submit").off("click").on("click", function() {
 		
+		console.log($("#content").val());
+		
 		$("#softDeleteFlag").val("posted");
 		
 		$.ajax({
@@ -27,4 +29,5 @@ function initListener() {
 	$("#clear").off("click").on("click", function() {
 		$("#addForm")[0].reset();
 	});
+	
 }
