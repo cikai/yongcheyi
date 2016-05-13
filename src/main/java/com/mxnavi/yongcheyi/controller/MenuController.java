@@ -26,9 +26,9 @@ public class MenuController {
 	@ResponseBody
     public static void main(String[] args) {  
         // 第三方用户唯一凭证  
-        String appId = "000000000000000000";  
+        String appId = "wxfbdd3944f6e45ae6";  
         // 第三方用户唯一凭证密钥  
-        String appSecret = "00000000000000000000000000000000";  
+        String appSecret = "2f7b7a85a0786c917e013b67859b0aad";  
   
         // 调用接口获取access_token  
         AccessToken at = WeixinUtil.getAccessToken(appId, appSecret);  

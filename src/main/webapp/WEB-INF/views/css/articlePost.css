@@ -2,3 +2,9 @@
 	width: 100%;
 	margin-top: 50px;
 }
+
+#contentPreview {
+	margin-top: 30px;
+	width: 60%;
+	margin-left: 20%;
+}

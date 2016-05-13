@@ -33,9 +33,10 @@ function initDataTable() {
 				tableList.push(dataList.slice(i, i + 11));
 			}
 			createTable(tableList);
+			$("#contentPreview").html(data.result.articleList[0].content);
 		},
 		error : function(data) {
-			$('#articleTable').html("234");
+			$('#articleTable').html("服务器错误！");
 		}
 	});
 }
@@ -48,7 +49,8 @@ function createTable(tableList) {
 			name : "id"
 		}, {
 			title : "标题",
-			name : "title"
+			name : "title",
+			fn: contentView
 		}, {
 			title : "封面素材ID",
 			name : "thumbMediaId"
@@ -76,11 +78,31 @@ function createTable(tableList) {
 			name : "updateTime"
 		} ]
 	});
+	
+	 $('#articleTable tbody').on('click','tr td:nth-child(7)', function (value, rowValue, tdDom) {
+		   var name = $(this).text();
+		   var $dom = $("<a href='javascript:void(0)'></a>").text(value);
+		    $dom.on("click", name);
+		    $dom.appendTo(tdDom);
+		} );
+	
 }
 
 function csUrlHandler(value, rowValue, tdDom) {
     var $dom = $("<a href='javascript:void(0)'></a>").text(value);
     $dom.on("click", rowValue);
+    $dom.appendTo(tdDom);
+    return false;
+}
+
+function contentView (value, rowValue, tdDom) {
+	
+	console.log(value + rowValue + tdDom);
+	
+	var $dom = $("<a href='javascript:void(0)'></a>").text(value);
+    $dom.on("click", function() {
+    	alert("sdf");
+    });
     $dom.appendTo(tdDom);
     return false;
 }

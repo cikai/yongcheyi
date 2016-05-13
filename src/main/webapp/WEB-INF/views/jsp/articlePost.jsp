@@ -26,6 +26,8 @@
 	<div class="articleTable">
 		<table id="articleTable"></table>
 	</div>
+	
+	<div id="contentPreview"></div>
 
 </body>
 </html>
