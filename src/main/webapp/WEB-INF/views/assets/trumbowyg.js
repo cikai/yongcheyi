@@ -686,6 +686,15 @@ $.trumbowyg = {
             this.$btnPane.find('.'+this.o.prefix + 'viewHTML-button').toggleClass(this.o.prefix + 'active');
             console.log(this.$editor[0].innerHTML);
         },
+        
+        contentHtml: function() {
+        	 this.semanticCode(false, true);
+             this.$editor.toggle();
+             this.$e.toggle();
+             this.$btnPane.toggleClass(this.o.prefix + 'disable');
+             this.$btnPane.find('.'+this.o.prefix + 'viewHTML-button').toggleClass(this.o.prefix + 'active');
+             return this.$editor[0].innerHTML;
+        },
 
         // Open dropdown when click on a button which open that
         dropdown: function(name){

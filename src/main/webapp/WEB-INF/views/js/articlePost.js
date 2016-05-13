@@ -13,7 +13,7 @@ function initDataTable() {
 	var tableList = [];
 	$.ajax({
 		url : 'searchArticle',
-		type : 'get',
+		type : 'post',
 		dataType : 'json',
 		data : $("#articleSearchForm").serialize(),
 		success : function(data) {
@@ -33,7 +33,7 @@ function initDataTable() {
 				tableList.push(dataList.slice(i, i + 11));
 			}
 			createTable(tableList);
-			$("#contentPreview").html(data.result.articleList[0].content);
+			 $("#customized-buttonpane").html(data.result.articleList[0].content);
 		},
 		error : function(data) {
 			$('#articleTable').html("服务器错误！");
@@ -50,7 +50,7 @@ function createTable(tableList) {
 		}, {
 			title : "标题",
 			name : "title",
-			fn: contentView
+			fn : contentView
 		}, {
 			title : "封面素材ID",
 			name : "thumbMediaId"
@@ -66,7 +66,7 @@ function createTable(tableList) {
 		}, {
 			title : "文章地址",
 			name : "contentSourceUrl",
-			fn: csUrlHandler
+			fn : csUrlHandler
 		}, {
 			title : "状态",
 			name : "softDeleteFlag"
@@ -78,34 +78,32 @@ function createTable(tableList) {
 			name : "updateTime"
 		} ]
 	});
-	
-	 $('#articleTable tbody').on('click','tr td:nth-child(7)', function (value, rowValue, tdDom) {
-		   var name = $(this).text();
-		   var $dom = $("<a href='javascript:void(0)'></a>").text(value);
-		    $dom.on("click", name);
-		    $dom.appendTo(tdDom);
-		} );
-	
+
+	$('#articleTable tbody').on('click', 'tr td:nth-child(7)',
+			function(value, rowValue, tdDom) {
+				var name = $(this).text();
+				var $dom = $("<a href='javascript:void(0)'></a>").text(value);
+				$dom.on("click", name);
+				$dom.appendTo(tdDom);
+			});
+
 }
 
 function csUrlHandler(value, rowValue, tdDom) {
-    var $dom = $("<a href='javascript:void(0)'></a>").text(value);
-    $dom.on("click", rowValue);
-    $dom.appendTo(tdDom);
-    return false;
-}
-
-function contentView (value, rowValue, tdDom) {
-	
-	console.log(value + rowValue + tdDom);
-	
 	var $dom = $("<a href='javascript:void(0)'></a>").text(value);
-    $dom.on("click", function() {
-    	alert("sdf");
-    });
-    $dom.appendTo(tdDom);
-    return false;
+	$dom.on("click", rowValue);
+	$dom.appendTo(tdDom);
+	return false;
 }
 
+function contentView(value, rowValue, tdDom) {
 
+	console.log(value + rowValue + tdDom);
 
+	var $dom = $("<a href='javascript:void(0)'></a>").text(value);
+	$dom.on("click", function() {
+		alert("sdf");
+	});
+	$dom.appendTo(tdDom);
+	return false;
+}

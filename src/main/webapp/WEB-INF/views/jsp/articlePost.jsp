@@ -12,12 +12,18 @@
 <script src="js/libs/jquery.dataTables.js"></script>
 <script src="js/articlePost.js"></script>
 
+<script src="assets/trumbowyg.js"></script>
+<script src="assets/plugins/base64/trumbowyg.base64.js"></script>
+<link rel="stylesheet" href="assets/design/css/trumbowyg.css">
+
 <title></title>
 </head>
 
 <body>
 	<div id="articleSearch">
+	检索条件
 		<form id="articleSearchForm">
+		<span>ID:</span>
 			<input type="text" name="id" value="" placeholder="请输入检索ID">
 		</form>
 		<button id="searchBtn" style="margin-top: 5px;">检索</button>
@@ -27,7 +33,9 @@
 		<table id="articleTable"></table>
 	</div>
 	
-	<div id="contentPreview"></div>
+	<div id="odiv" style="display: none; position: absolute; z-index: 100;"></div>
+	<div onmousedown="show_element(event)" style="clear: both"
+		id="customized-buttonpane" class="editor"></div>
 
 </body>
 </html>

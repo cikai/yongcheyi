@@ -31,7 +31,7 @@ public class ArticleController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/searchArticle", method = RequestMethod.GET)
+	@RequestMapping(value = "/searchArticle", method = RequestMethod.POST)
 	public Map<String, Object> list(SearchModel searchModel) {
 
 		List<ArticleDto> articleDtoList = articleService.getArticle(searchModel);

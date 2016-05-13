@@ -10,6 +10,8 @@ function initListener() {
 		
 		$("#softDeleteFlag").val("posted");
 		
+		$("#content").val($("#customized-buttonpane").html());
+		
 		$.ajax({
 			url : "addArticle",
 			data : $("#addForm").serialize(),
